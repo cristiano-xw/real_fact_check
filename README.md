@@ -1,5 +1,5 @@
 
-# Multi-Hop Fact-Checking & Reasoning Dataset
+# Multi-Hop Fact-Checking 
 
 This repository contains a specialized dataset designed for **multi-hop fact-checking**, **temporal reasoning**, and **hallucination detection**. The data is organized into two primary components: raw real-world claims scraped from fact-checking authorities, and a synthetic multi-hop dataset featuring diverse negative sampling strategies.
 
