@@ -35,7 +35,7 @@ This repository contains a specialized dataset designed for **multi-hop fact-che
 | `hop_count` | `int` | Total reasoning steps required for verification. |
 | `source_entities` | `list` | Core entities involved in the multi-hop chain. |
 | `true_claim` | `obj` | The factually correct reasoning object. |
-| `negative_samples` | `list` | List of corrupted claims for hallucination testing. |
+| `negative_samples` | `obj` | List of corrupted claims for hallucination testing. |
 
 #### **A. The `true_claim` & `negative_samples` Object Detail**
 
