@@ -20,18 +20,6 @@ This repository contains a specialized dataset designed for **multi-hop fact-che
 | `tag` | `list` | Keywords or entities associated with the claim (e.g., ["India", "Turkey"]). |
 | `time_sensitive` | `int` | Binary flag (`1` or `0`) indicating if temporal context is crucial for verification. |
 
-**Example:**
-```json
-{
-  "claim": "A video authentically shows thousands of people protesting...",
-  "label": "False",
-  "publishdate": "2025-03-21",
-  "tag": ["India", "Turkey", "Pope Francis"],
-  "evidence": "In March 2025, online users shared a rumor claiming a video showed..."
-}
-
-```
-
 ---
 
 
@@ -78,34 +66,4 @@ Both objects share a similar internal structure to facilitate direct comparison:
 
 ---
 
-## 📝 Multi-Hop Example (Gene Hackman & Caitlin Clark Case)
 
-```json
-{
-  "hop_count": 5,
-  "source_entities": ["Caitlin Clark", "U.S. states", "Gene Hackman"],
-  "true_claim": {
-    "claim": "By February 18, 2025, the date Gene Hackman died, Caitlin Clark... had already been selected first overall by the Indiana Fever...",
-    "label": "True",
-    "sub_claims": [
-      {
-        "step": 2,
-        "question": "Was Caitlin Clark selected first overall by the Indiana Fever in the 2024 WNBA draft?",
-        "answer": "Yes; April 15, 2024.",
-        "evidence": "Clark was selected first overall by the Indiana Fever in the 2024 WNBA draft.",
-        "date": "2024-04-15"
-      }
-      // ... additional steps for birth, death, and constitutional rulings
-    ]
-  },
-  "negative_samples": [
-    {
-      "strategy": "Chronological Distortion",
-      "claim": "...Caitlin Clark... had not yet been selected... because the WNBA draft was held on April 15, 2025...",
-      "label": "False",
-      "explanation": "This claim pushes the WNBA draft to 2025, implying Clark wasn't drafted by Hackman's death. In reality, she was drafted in 2024."
-    }
-  ]
-}
-
-```
