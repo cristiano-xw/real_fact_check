@@ -13,7 +13,7 @@ This repository contains a specialized dataset designed for **multi-hop fact-che
 | Field | Type | Description |
 | :--- | :--- | :--- |
 | `claim` | `str` | The statement or claim being verified. |
-| `label` | `str` | The verdict (e.g., "False", "True", "Miscaptioned"). |
+| `label` | `str` | The verdict (e.g., "False", "True"). |
 | `evidence` | `str` | The full text content/report from the fact-checking article. |
 | `publishdate` | `str` | The publication date of the fact-check (YYYY-MM-DD). |
 | `source` | `str` | Citations, URLs, and metadata regarding the source of the claim. |
